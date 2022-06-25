@@ -5,15 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css
+">
+    <link rel="stylesheet" href="./sass/main.css">
+    >
 </head>
 <body>
     <!--Main-->
+<section class="products">
+    <div class="container">
+        <p class="products__text">100% natural</p>
+        <h2 class="products__title">products</h2>
+        <ul class="products__list">
+            <li class="products__item">
+                <h3 class="products__item__title products__item--cream">ice cream</h3>
+                <p class="products__item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et<span class="text-visually-hidden">. dolore magna aliqua facilisis.</span></p>
+                <button type="button" class="products__bnt" aria-label="Опис продукту" data-modal-open>
+                    <div class="card is-hidden" data-modal>
+                        <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.</p>
+                    </div>
+                </button>
+            </li>
+            <li class="products__item">
+                <h3 class="products__item__title products__item--coffee">ice coffee</h3>
+                <p class="products__item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et<span class="text-visually-hidden">. dolore magna aliqua facilisis.</span></p>
+                <button type="button" class="products__bnt" aria-label="Опис продукту" data-modal-open>
+                    <div class="card is-hidden" data-modal>
+                        <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.</p>
+                    </div>
+                </button>
+            </li>
+            <li class="products__item">
+                <h3 class="products__item__title products__item--milkshakes">milkshakes</h3>
+                <p class="products__item__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et<span class="text-visually-hidden">. dolore magna aliqua facilisis.</span></p>
+                <button type="button" class="products__bnt" aria-label="Опис продукту" data-modal-open>
+                    <div class="card is-hidden" data-modal>
+                        <p class="card__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et. dolore magna aliqua facilisis.</p>
+                    </div>
+                </button>
+            </li>
+        </ul>
+    </div>
+</section>
+
     <div>
         <!--Main content-->
         <div>
             <!--about user-->
             <div>
-                <h2>Front-End Developer</h2>
+                <h2 class="title">Front-End Developer</h2>
 
                 <h1>Anton Chornyi</h1>
 
@@ -129,6 +173,8 @@
                 </ul>
         </aside>
     </div>
+
+    <script src="/js/mobile-menu.js"></script>
 </body>
 
 </html>

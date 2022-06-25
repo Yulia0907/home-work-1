@@ -1,0 +1,376 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+@media screen and (min-width: 320px) {
+  .container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+p, h2, h3, ul {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+.products__text {
+  font-family: "Titan One", cursive;
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #FFA5BA;
+  font-size: 18px;
+  line-height: 1.17;
+  margin-bottom: 15px;
+}
+@media screen and (min-width: 768px) {
+  .products__text {
+    font-size: 26px;
+    line-height: 1.15;
+    margin-bottom: 18px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products__text {
+    font-size: 30px;
+    line-height: 1.13;
+    margin-bottom: 16px;
+  }
+}
+
+.products__title {
+  font-family: "Titan One";
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #D41443;
+  font-size: 34px;
+  line-height: 1.15;
+  margin-bottom: 8px;
+}
+@media screen and (min-width: 768px) {
+  .products__title {
+    font-size: 48px;
+    line-height: 1.15;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products__title {
+    font-size: 58px;
+    line-height: 1.14;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .products__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.products__item {
+  position: relative;
+  background: linear-gradient(to top, #F0D1A5 25% 75%, #FFFFFF 75% 25%);
+  border-radius: 24px;
+  padding-bottom: 40px;
+}
+.products__item:first-child {
+  background: linear-gradient(to top, #FFB8CA 25% 75%, #FFFFFF 75% 25%);
+}
+.products__item:last-child {
+  background: linear-gradient(to top, #C2E297 25% 75%, #FFFFFF 75% 25%);
+}
+@media screen and (min-width: 768px) {
+  .products__item:last-child {
+    margin-right: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .products__item {
+    margin-right: 16px;
+    flex-basis: calc((100% - 32px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products__item {
+    margin-right: 32px;
+    flex-basis: calc((100% - 64px) / 3);
+    padding-bottom: 60px;
+  }
+}
+
+.products__item__title::before {
+  content: " ";
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 280px;
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 768px) {
+  .products__item__title::before {
+    height: 224px;
+    margin-bottom: 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products__item__title::before {
+    height: 261px;
+    margin-bottom: 32px;
+  }
+}
+
+.products__item--cream::before {
+  background-image: url("/images/ice_cream-sm.png");
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .products__item--cream::before {
+    background-image: url("./images/ice_cream-sm@2x.png");
+  }
+}
+@media screen and (min-width: 768px) {
+  .products__item--cream::before {
+    background-image: url("/images/ice_cream-md.png");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .products__item--cream::before {
+    background-image: url("/images/ice_cream-md@2x.png");
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products__item--cream::before {
+    background-image: url("/images/ice_cream-ld.png");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .products__item--cream::before {
+    background-image: url("/images/ice_cream-ld@2x.png");
+  }
+}
+
+.products__item--coffee::before {
+  background-image: url("/images/ice_coffee-sm.png");
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .products__item--coffee::before {
+    background-image: url("/images/ice_coffee-sm@2x.png");
+  }
+}
+@media screen and (min-width: 768px) {
+  .products__item--coffee::before {
+    background-image: url("/images/ice_coffee-md.png");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .products__item--coffee::before {
+    background-image: url("/images/ice_coffee-md@2x.png");
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products__item--coffee::before {
+    background-image: url("/images/ice_coffee-ld.png");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .products__item--coffee::before {
+    background-image: url("/images/ice_coffee-ld@2x.png");
+  }
+}
+
+.products__item--milkshakes::before {
+  background-image: url("/images/milkshakes-sm.png");
+}
+@media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .products__item--milkshakes::before {
+    background-image: url("/images/milkshakes-sm@2x.png");
+  }
+}
+@media screen and (min-width: 768px) {
+  .products__item--milkshakes::before {
+    background-image: url("/images/milkshakes-md.png");
+  }
+}
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
+  .products__item--milkshakes::before {
+    background-image: url("/images/milkshakes-md@2x.png");
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products__item--milkshakes::before {
+    background-image: url("/images/milkshakes-ld.png");
+  }
+}
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
+  .products__item--milkshakes::before {
+    background-image: url("/images/milkshakes-ld@2x.png");
+  }
+}
+
+.products__item__title {
+  font-family: "Titan One";
+  font-style: normal;
+  font-weight: 400;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-size: 20px;
+  line-height: 1.15;
+}
+@media screen and (min-width: 1200px) {
+  .products__item__title {
+    font-size: 30px;
+    line-height: 1.13;
+  }
+}
+
+.products__item__title::after {
+  content: " ";
+  display: block;
+  width: 26px;
+  height: 6px;
+  margin: 32px auto;
+  background-image: url("/images/group.svg");
+}
+
+.products__item__text {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 32px;
+  margin-left: 41px;
+  margin-right: 39px;
+}
+@media screen and (min-width: 768px) {
+  .products__item__text {
+    line-height: 1.8;
+    margin-left: 32px;
+    margin-right: 32px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .products__item__text {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 70px;
+    margin-left: 64px;
+    margin-right: 63px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .text-visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    white-space: nowrap;
+    -webkit-clip-path: inset(50%);
+            clip-path: inset(50%);
+  }
+}
+
+.products__bnt {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: transparent;
+  background-image: url(/images/arrow-right.png);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+}
+
+.card {
+  z-index: 100;
+  width: 70%;
+  height: 80%;
+  position: fixed;
+  top: 10%;
+  left: 15%;
+  background: #FFA5BA;
+}
+
+.card.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card {
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.7), rgba(47, 48, 58, 0.9)), url(/images/milkshakes-ld.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card__text {
+  font-family: "Titan One";
+  font-style: normal;
+  font-weight: 700;
+  text-align: center;
+  margin: 45px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #FFB8CA;
+  font-size: 28px;
+  line-height: 1;
+}
+@media screen and (min-width: 768px) {
+  .card__text {
+    font-size: 38px;
+    line-height: 1.2;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .card__text {
+    font-size: 48px;
+    line-height: 1.4;
+  }
+}/*# sourceMappingURL=main.css.map */
