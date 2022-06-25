@@ -47,21 +47,22 @@ ul {
     
     font-size: 34px;
     line-height: 1.15;
-    margin-bottom: 8px;
+    margin-bottom: 148px;
     
     @include mq(tablet) {
+        margin-bottom: 158px;
         font-size: 48px;
         line-height: 1.15;
     }
     
     @include mq(desktop) {
+        margin-bottom: 281px;
         font-size: 58px;
         line-height: 1.14;
     }
 }
     
 .products__list {
-    
         @include mq(tablet) {
             display: flex;
             flex-wrap: wrap;
@@ -69,22 +70,22 @@ ul {
 }
     
 .products__item {
-        background: linear-gradient(to top,
-        #F0D1A5 25% 75%, var(--pr-white-color) 75% 25%); 
-        border-radius: 24px;
-        padding-bottom: 40px;
+    position: relative;
+
+    background-color: #F0D1A5;
+
+    border-radius: 24px;
+    padding-bottom: 40px;
         
     &:first-child {
-            background: linear-gradient(to top,
-            var(--pr-bg-color) 25% 75%, var(--pr-white-color) 75% 25%);
-            }
+    background-color: var(--pr-bg-color);
+        }
         
     &:last-child {
-            background: linear-gradient(to top,
-            #C2E297 25% 75%, var(--pr-white-color) 75% 25%);
+    background-color: #C2E297;
                 
         @include mq(tablet) {
-                    margin-right: 0;
+                 margin-right: 0;
                 }
     }
     
@@ -99,35 +100,48 @@ ul {
             padding-bottom: 60px;
         }
 }
-    
-.products__item__title::before {
+.products__item:hover, .products__item:focus {
+    transform: scale(1.1);
+    transition: all 0.3s ease;
+
+}  
+.products__item::before {
     content: " ";
     display: block;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    position: absolute;
+    left: 0;
+    top: -140px;
 
     width: 100%;
     height: 280px; 
     
-    margin-bottom: 20px;
 
     @include mq(tablet) {
+        top: -138px;
         height: 224px; 
-        margin-bottom: 32px;
     }
 
     @include mq(desktop) {
-        height: 261px; 
-        margin-bottom: 32px;
+        top: -261px;
+        height: 394px; 
     }
 }
 
+.products__item--cream {
+    margin-bottom: 140px;
+
+    @include mq(tablet) {
+        margin-bottom: 0;
+    }
+}
 .products__item--cream::before {
     background-image: url("/images/ice_cream-sm.png");
 
         @include mq(retina)  {
-            background-image: url("./images/ice_cream-sm@2x.png");
+            background-image: url("/images/ice_cream-sm@2x.png");
         }
 
     @include mq(tablet) {
@@ -144,6 +158,14 @@ ul {
         @include mq(retina) {
             background-image: url("/images/ice_cream-ld@2x.png");
         }
+    }
+}
+
+.products__item--coffee {
+    margin-bottom: 140px;
+
+    @include mq(tablet) {
+        margin-bottom: 0;
     }
 }
 
@@ -207,8 +229,15 @@ ul {
     
     font-size: 20px;
     line-height: 1.15;
+
+    padding-top: 160px;
+
+    @include mq(tablet) {
+        padding-top: 118px;
+    }
     
     @include mq(desktop) {
+        padding-top: 165px;
         font-size: 30px;
         line-height: 1.13;
     }
@@ -277,6 +306,7 @@ ul {
         border-radius: 50%;
         border: transparent;
         background-image: url(/images/arrow-right.png);
+      
     
         display: block;
         margin-left: auto;
@@ -284,22 +314,29 @@ ul {
         cursor: pointer;
 }
 
-.card {   
-    z-index: 100;
-    width: 70%;
-    height: 80%;
-    position: fixed;
-    top: 10%;
-    left: 15%;
-   
-    background: var(--pr-accent-color);
+.products__bnt:hover, .products__bnt:focus, .products__bnt:active  {
+    transform: translateY(-8px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2), 0 16px 20px rgba(0,0,0,0.2);
+    color: var(--sec-accent-color);
+
 }
 
-.card.is-hidden {
-    visibility: hidden;
-    opacity: 0;
-    pointer-events: none;
-}
+// .card {   
+//     z-index: 100;
+//     width: 70%;
+//     height: 80%;
+//     position: fixed;
+//     top: 10%;
+//     left: 15%;
+   
+//     background: var(--pr-accent-color);
+// }
+
+// .card.is-hidden {
+//     visibility: hidden;
+//     opacity: 0;
+//     pointer-events: none;
+// }
 
 // .card--cream {
 //     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.7), rgba(47, 48, 58, 0.9)),
@@ -314,34 +351,34 @@ ul {
 //      background-size: cover;   
 //  }
 
-.card {
-   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.7), rgba(47, 48, 58, 0.9)),
-                url(/images/milkshakes-ld.png);
-    background-repeat: no-repeat;
-    background-size: cover;   
-}
+// .card {
+//    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.7), rgba(47, 48, 58, 0.9)),
+//                 url(/images/milkshakes-ld.png);
+//     background-repeat: no-repeat;
+//     background-size: cover;   
+// }
 
-.card__text {
-    font-family: 'Titan One';
-    font-style: normal;
-    font-weight: 700;
-    text-align: center;
-    margin: 45px;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: var(--pr-bg-color);
+// .card__text {
+//     font-family: 'Titan One';
+//     font-style: normal;
+//     font-weight: 700;
+//     text-align: center;
+//     margin: 45px;
+//     letter-spacing: 0.06em;
+//     text-transform: uppercase;
+//     color: var(--pr-bg-color);
 
-    font-size: 28px;
-    line-height: 1;
+//     font-size: 28px;
+//     line-height: 1;
 
-    @include mq(tablet) {
-        font-size: 38px;
-        line-height: 1.2;
-    }
+//     @include mq(tablet) {
+//         font-size: 38px;
+//         line-height: 1.2;
+//     }
 
-    @include mq(desktop) {
-        font-size: 48px;
-        line-height: 1.4;
-    }
+//     @include mq(desktop) {
+//         font-size: 48px;
+//         line-height: 1.4;
+//     }
 
-}
+// }
